@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.29)
 project(base_msgs)
 
 # 新增这一行，消除CMP0148警告
 cmake_policy(SET CMP0148 OLD)
+
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -14,15 +15,22 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+# 兼容旧版本的cmake，因为ros2 humble自动生成的cmake三3.8版本
+if(POLICY_CMP0148)
+ cmake_policy(SET CMP0148 OLD)
+endif()
+
+# find dependencies 查找依赖
+find_package(rosidl_default_generators REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
