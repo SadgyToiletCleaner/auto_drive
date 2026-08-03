@@ -5,13 +5,13 @@
 
 namespace Planning
 {
-class PlanningProcess : public rclcpp::Node
+  class PlanningProcess : public rclcpp::Node // 规划总流程
   {
-    public:
-      // 构造函数
-      PlanningProcess();
-      //总流程
-      bool process();
+  public:
+    // 构造函数
+    PlanningProcess();
+    //总流程
+    bool process();
   private:
   };
 }  // namespace Planning
