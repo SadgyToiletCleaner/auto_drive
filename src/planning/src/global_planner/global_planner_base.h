@@ -8,7 +8,6 @@ namespace Planning
     class GlobalPlannerBase // 全局路径规划器基类
     {
     public:
-        GlobalPlannerBase() = default;
 
     private:
 

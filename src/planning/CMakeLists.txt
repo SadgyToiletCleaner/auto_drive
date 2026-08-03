@@ -33,8 +33,9 @@ include_directories(
   src/common/math
   src/common/decision_center
   src/common/pnc_map_creator
-  src/common/pnc_map_creator/pnc_map_straight
-  src/common/pnc_map_creator/pnc_map_sturn
+  src/pnc_map_creator
+  src/pnc_map_creator/pnc_map_straight
+  src/pnc_map_creator/pnc_map_sturn
   src/global_planner
   src/global_planner/global_planner_normal
   src/local_planner
