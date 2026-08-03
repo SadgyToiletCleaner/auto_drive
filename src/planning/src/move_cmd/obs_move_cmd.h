@@ -1,0 +1,17 @@
+#ifndef OBS_MOVE_CMD_H_
+#define OBS_MOVE_CMD_H_
+
+#include "rclcpp/rclcpp.hpp"
+
+namespace Planning
+{
+    class ObsMoveCmd : public rclcpp::Node // 障碍物运动指令
+    {
+    public:
+        ObsMoveCmd();
+
+    private:
+
+    };
+}  // Planning
+#endif  // OBS_MOVE_CMD_H_
