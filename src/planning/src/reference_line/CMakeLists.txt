@@ -10,7 +10,7 @@ set(DEPENDS
 )
 
 # 添加动态库
-add_library(reference_line
+add_library(reference_line SHARED
   ${CMAKE_CURRENT_SOURCE_DIR}/reference_line_creator.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/reference_line_smoother.cpp
 )
@@ -33,5 +33,7 @@ target_link_libraries(${target}
 # 安装动态库，节点和相关目录 
 install(TARGETS
   ${target}
-  DESTINATION lib/${PLANNING_PACKAGE_NAME}
+  LIBRARY DESTINATION lib
 )
+
+ 

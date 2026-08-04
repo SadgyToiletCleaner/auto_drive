@@ -32,6 +32,6 @@ target_link_libraries(${target}
 # 安装动态库，节点和相关目录
 install(TARGETS
   ${target}
-  LIBRARY DESTINATION Lib
+  LIBRARY DESTINATION lib
 ) 
 
