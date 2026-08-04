@@ -24,6 +24,7 @@ namespace Planning
     //总流程
     bool process();
   private:
+    std::unique_ptr<ConfigReader> process_config_; // 配置
   };
 }  // namespace Planning
 #endif  // PLANNING_PROCESS_H_
