@@ -2,6 +2,7 @@
 #define LOCAL_PATH_SMOOTH_H_
 
 #include "rclcpp/rclcpp.hpp"
+#include "config_reader.h"
 
 namespace Planning
 {

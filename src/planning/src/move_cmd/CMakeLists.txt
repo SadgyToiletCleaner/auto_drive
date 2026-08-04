@@ -30,10 +30,10 @@ foreach(target ${MOVE_TARGETS})
     ${DEPENDS}
   )
 
-  # target_link_libraries(${target}
-  #   config_reader
-  #   vehicle_info
-  # ) 
+  target_link_libraries(${target}
+    config_reader
+    vehicle_info
+  ) 
 endforeach()
 
 

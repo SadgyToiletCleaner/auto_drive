@@ -47,6 +47,7 @@ include_directories(
   src/vehicle_info/obs_car
   src/planning_process
   src/move_cmd
+  src/decision_center
 
 )
 
