@@ -3,9 +3,9 @@
 namespace Planning
 {
 
-    PlanningProcess::PlanningProcess(): Node("planning_node")
+    PlanningProcess::PlanningProcess(): Node("planning_process")
     {
-        RCLCPP_INFO(this->get_logger(), "planning_node created");
+        RCLCPP_INFO(this->get_logger(), "planning_process created");
 
         // 读取配置文件
         process_config_ = std::make_unique<ConfigReader>();
